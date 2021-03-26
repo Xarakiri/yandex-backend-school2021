@@ -88,7 +88,7 @@ HTTP 201 Created
 }
 ```
 
-### <a name="patch-couriers"></a> 2: PATCH /couriers/$courier_id
+### <a name="patch-courier"></a> 2: PATCH /couriers/$courier_id
 Позволяет изменить информацию о курьере. Принимает  json  и любые поля из списка:  `courier_type` ,  `regions` ,  `working_hours` .
 При редактировании следует учесть случаи, когда меняется график и уменьшается грузоподъемность и появляются
 заказы,
@@ -263,7 +263,9 @@ GET /couriers/2
 
 Заработок рассчитывается как сумма оплаты за каждый завершенный развоз:
 
-$sum=\sum(500 * C)$
+
+<img src="https://render.githubusercontent.com/render/math?math=sum=\sum(500 * C)">
+
 
 `C` — коэффициент, зависящий от типа курьера (пеший — 2, велокурьер — 5, авто — 9) на момент формирования
 развоза.
